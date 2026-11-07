@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Montserrat", sans-serif; background: #f2f4ff; color: #20204a; }
+button, input, select { font: inherit; }
+button, select { cursor: pointer; }
+.loading-overlay { position: fixed; inset: 0; display: grid; place-items: center; background: rgba(255,255,255,.8); z-index: 99; }
+.loading-gif { width: 90px; }
+.login-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: linear-gradient(135deg, #3939d9f2, #e5e5e5); }
+.login-card { width: min(520px, 100%); padding: 42px; background: #fff; border-radius: 24px; box-shadow: 0 20px 60px rgba(20,20,80,.18); text-align: center; }
+.logo { width: 210px; max-width: 100%; margin-bottom: 18px; }
+.login-card h1 { margin: 0 0 10px; font-size: 32px; }
+.login-card p { color: #777; line-height: 1.6; margin-bottom: 28px; }
+.login-card form { display: grid; gap: 16px; }
+.login-card input { padding: 15px 18px; border: 1px solid #b9b9d8; border-radius: 12px; outline: none; }
+.login-card input:focus { border-color: #3939d9; }
+.login-card button, .logout { border: 0; border-radius: 12px; padding: 14px 24px; color: white; background: linear-gradient(to right, #9083d5, #271776ca); font-weight: 700; }
+.dashboard { min-height: 100vh; padding: 28px 5%; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 28px; }
+.doctor-title { display: flex; align-items: center; gap: 20px; }
+.doctor-title img { width: 190px; }
+.doctor-title h1 { margin: 0 0 6px; }
+.doctor-title p { margin: 0; color: #777; }
+.profile-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 18px; margin-bottom: 22px; }
+.profile-card, .stat, .appointments-card { background: #fff; border-radius: 20px; box-shadow: 0 8px 30px rgba(50,50,120,.08); }
+.profile-card { padding: 22px; display: flex; gap: 18px; align-items: center; }
+.profile-card img { width: 90px; height: 90px; object-fit: cover; border-radius: 50%; }
+.profile-card h2 { margin: 0 0 10px; font-size: 21px; }
+.profile-card p { margin: 6px 0; color: #666; font-size: 13px; }
+.stat { padding: 28px 22px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+.stat span { color: #777; font-weight: 600; }
+.stat strong { font-size: 34px; }
+.appointments-card { padding: 24px; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.section-heading h2 { margin: 0; }
+.section-heading span { color: #777; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 900px; }
+th, td { padding: 14px 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { color: #666; font-size: 13px; }
+td { font-size: 13px; }
+td small { display: block; color: #888; margin-top: 4px; }
+.status { padding: 8px 10px; border-radius: 8px; border: 1px solid #ddd; }
+.empty, .center { padding: 60px; text-align: center; color: #777; }
+@media (max-width: 1000px) { .profile-grid { grid-template-columns: 1fr 1fr; } .profile-card { grid-column: span 2; } }
+@media (max-width: 650px) { .dashboard { padding: 18px; } .topbar { align-items: flex-start; } .doctor-title img { width: 130px; } .doctor-title h1 { font-size: 20px; } .profile-grid { grid-template-columns: 1fr; } .profile-card { grid-column: span 1; } .login-card { padding: 28px 20px; } }
